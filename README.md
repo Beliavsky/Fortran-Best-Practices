@@ -47,6 +47,12 @@ For example, ```call sub(x1,x2,x3,x4) ! out: x3,x4``` clarifies what the outputs
 #### Avoid ```intent(in out)``` arguments when possible
 It was common in Fortran 77 libraries to overwrite an input matrix with output to conserve memory, but this is rarely necessary now. Instead use separate ```intent(in)``` and ```intent(out)``` array arguments.
 
+#### Do not write a function with a ```pointer``` ```result```
+This is prone to memory leaks when the function is used in an expression.
+
+#### Use ```allocatable``` arrays rather than ```pointer``` arrays when possible
+Pointer arrays must be explicitly deallocated to avoid a memory leak.
+
 #### At the beginning of a function or subroutine, have at least one comment line explaining what it does
 
 #### Have a comment explaining the meaning of each procedure argument, either separately or on the same line as the argument declaration
