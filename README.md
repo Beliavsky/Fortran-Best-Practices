@@ -8,4 +8,4 @@ Instead of
 
 write
 
-```write (*,"('coeff:',100(1x,f12.6))") x```
+```write (*,"('coeff:',100(1x,f12.6))") x(1:n)```
