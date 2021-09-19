@@ -27,6 +27,12 @@ This tells the reader that they do not have side effects.
 
 #### Have a comment explaining the meaning of each procedure argument, either separately or on the same line as the argument declaration
 
+#### When importing entities from a module, add the ```only``` qualifier
+For example, ```use m, only: func,sub``` instead of ```use m```. This clarifies for the reader what is being imported from each module.
+
+#### Put a ```private``` statement at the beginning of a module. Only make ```public``` what is necessary.
+This reduces namespace clashes and tells the reader what entities of a module are exported to other program units.
+
 #### Explicitly leave spaces between numbers in formatted output
 Otherwise the numbers may be "mushed" together if they are larger than expected. Instead of 
 
