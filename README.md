@@ -39,6 +39,9 @@ This reduces namespace clashes and tells the reader what entities of a module ar
 #### Do not put a ```stop``` statement before the end of the main program or a ```return``` statement before the end of a procedure.
 Such statements are unnecessary. Use ```stop``` only to end a program early or ```return``` only to exit a procedure early.
 
+#### Do not ```deallocate``` ```allocatable``` arrays just before the end of a program or procedure
+This is unnecessary since such arrays are deallocated when they go out of scope.
+
 #### When opening a file, specify the ```action``` as ```read``` or ```write```
 
 #### Parametrize file units with meaningful names
