@@ -12,7 +12,7 @@ Code in lower case is more readable than code in all upper case. Comments should
 It is easier for the reader to understand a ```write``` statement if the format string is on the same line, rather than in a separate numbered format statement. If the same format string is used in multiple ```write``` statements, define it as a ```parameter```.
 
 #### Put functions and subroutines in modules
-This enables type-checking of arguments at compile time.
+This enables type-checking of arguments at compile time. If this is not possible, provide an explicit interface for the procedure.
 
 #### Put ```implicit none``` at the beginning of the main program or module
 If this is done, it is unnecessary to write ```implicit none``` in each procedure.
