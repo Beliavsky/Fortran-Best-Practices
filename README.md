@@ -39,7 +39,7 @@ It should appear after the declarations of function arguments but before the dec
 In a procedure, ```integer :: i = 0``` has a different meaning in Fortran than the analogous statement in other languages, and one should write ```integer, save :: i = 0``` instead to alert the reader.
 
 #### A procedure call with many arguments should use named arguments
-For example, ```call reg(lhs=a,rhs=b,coeff=x,stderr=se,sse=sumsq)``` is clearer than ```call reg(a,b,x,se,sumsq)```
+For example, ```call reg(lhs=a,rhs=b,coeff=x,stderr=c,sse=d)``` is clearer than ```call reg(a,b,x,c,d)```
 
 #### In subroutine calls, document the ```intent(out)``` and ```intent(in out)``` arguments with a comment
 For example, ```call sub(x1,x2,x3,x4) ! out: x3,x4``` clarifies what the outputs of ```sub``` are.
