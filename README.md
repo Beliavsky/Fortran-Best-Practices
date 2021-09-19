@@ -36,7 +36,7 @@ This will make it easier to call such a subroutine without naming the arguments.
 For example, ```call reg(lhs=a,rhs=b,coeff=x,stderr=se,sse=sumsq)``` is clearer than ```call reg(a,b,x,se,sumsq)```
 
 #### In subroutine calls, document the ```intent(out)``` and ```intent(in out)``` arguments with a comment
-For example, '''call sub(x1,x2,x3,x4) ! out: x3,x4``` clarifies what the outputs of ```sub``` are.
+For example, ```call sub(x1,x2,x3,x4) ! out: x3,x4``` clarifies what the outputs of ```sub``` are.
 
 #### At the beginning of a function or subroutine, have at least one comment line explaining what it does
 
