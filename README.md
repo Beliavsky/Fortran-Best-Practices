@@ -1,6 +1,6 @@
 # Fortran-Best-Practices
 
-Explicitly leave spaces between numbers in formatted output.
+####Explicitly leave spaces between numbers in formatted output. Otherwise the numbers may be "mushed" together if they are larger than expected.
 
 Instead of 
 
