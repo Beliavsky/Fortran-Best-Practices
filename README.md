@@ -29,7 +29,7 @@ This tells the reader that they do not have side effects.
 #### Do not have more than three or four required arguments for a procedure
 Use ```optional``` arguments and derived types (which can store multiple entities) to reduce the number of required arguments.
 
-#### The order of subroutine arguments should be required ```intent(in)``` arguments followed by required ```intent(out)``` or ```intent(in out)``` arguments, followed by ```optional``` arguments
+#### The order of subroutine arguments should be required ```intent(in)``` arguments, followed by required ```intent(out)``` or ```intent(in out)``` arguments, followed by ```optional``` arguments
 This will make it easier to call such a subroutine without naming the arguments. Argument declarations should be in the same order as the argument list.
 
 #### Declare a function ```result``` on a separate line
