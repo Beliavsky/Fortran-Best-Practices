@@ -149,6 +149,9 @@ This has been standard since Fortran 2003 and is supported by currently maintain
 #### Do not rely on list-directed output having the same appearance across compilers
 Use formatted output instead when this is desired.
 
+#### Do not rely on integer or real variables being initialized to zero
+The Fortran standard does not require this. Set such variables to zero explicitly if this is wanted.
+
 #### Compile with a standard conformance option and fix code that is not conformant. Consider fixing code that uses obsolescent features.
 Use for example ```gfortran -std=f2018``` or ```ifort -stand:f18```
 
