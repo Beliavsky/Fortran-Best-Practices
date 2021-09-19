@@ -29,6 +29,15 @@ This tells the reader that they do not have side effects.
 #### Do not have more than three or four required arguments for a procedure
 Use ```optional``` arguments and derived types to reduce the number of required arguments.
 
+#### The order of subroutine arguments should be required ```intent(in)``` arguments followed by required ```intent(out)``` or ```intent(in out)``` arguments, followed by ```optional``` arguments
+This will make it easier to call such a subroutine without naming the arguments. Argument declarations should be in the same order as the argument list.
+
+#### A procedure call with many arguments should use named arguments
+For example, ```call reg(lhs=a,rhs=b,coeff=x,stderr=se,sse=sumsq)``` is clearer than ```call reg(a,b,x,se,sumsq)```
+
+#### In subroutine calls, document the ```intent(out)``` and ```intent(in out)``` arguments with a comment
+For example, '''call sub(x1,x2,x3,x4) ! out: x3,x4``` clarifies what the outputs of ```sub``` are.
+
 #### At the beginning of a function or subroutine, have at least one comment line explaining what it does
 
 #### Have a comment explaining the meaning of each procedure argument, either separately or on the same line as the argument declaration
