@@ -112,3 +112,6 @@ For example, ```do iday=1,ndays``` or ```do iatom=1,natom```
 
 #### Don't use array sections when the whole array is referenced
 Refer to ```real :: x(n)``` with ```x``` instead of ```x(:)``` or ```x(1:n)```. Use array sections for subsets of an array.
+
+#### Use whole arrays in ```read``` and ```write``` statements instead of implied do loops when possible
+Use ```write (*,*) x``` instead of ```write (*,*) (x(i),i=1,n))``` if they have the same effect.
