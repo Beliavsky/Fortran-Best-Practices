@@ -78,3 +78,6 @@ The reader of a Fortran program expects variables such as ```i``` or ```i1``` to
 
 #### Compile with a standard conformance option and fix code that is not conformant
 Use for example ```gfortran -std=f2018``` or ```ifort -stand:f18```
+
+#### Regularly compile and run your code with multiple compilers
+Gfortran and Intel Fortran are both free and mature and should both be used, at the minimum.
