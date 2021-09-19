@@ -130,3 +130,6 @@ It helps the reader see what program unit is being terminated.
 
 #### Separate terms in an arithmetic expression and the LHS and RHS with spaces
 For example write ```z = c*x + d*y```
+
+#### Use integer exponentiation when possible
+Write ```x**2``` not ```x**2.0```
