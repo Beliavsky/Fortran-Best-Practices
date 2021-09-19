@@ -115,3 +115,6 @@ Refer to ```real :: x(n)``` with ```x``` instead of ```x(:)``` or ```x(1:n)```. 
 
 #### Use whole arrays in ```read``` and ```write``` statements instead of implied do loops when possible
 Use ```write (*,*) x``` instead of ```write (*,*) (x(i),i=1,n))``` if they have the same effect.
+
+### If you are passing multiple arrays to a procedure that must have the same dimensions, consider putting them in a derived type
+For example, if a subroutine accepts arguments ```days(:)```, ```months(:)```, ```years(:)``` that have a common length, probably a derived type should be defined containing (day,month,year). 
