@@ -99,7 +99,7 @@ A formatted ```read``` depends on the data file matching the format exactly and 
 
 #### Label deeply nested loops so that it is clear what the ```end do``` corresponds to
 
-#### Use one-line-if statements instead of if blocks when possible, for concision
+#### Use one-line-if statements instead of if blocks when possible, to be concise
 
 #### Short variable names should follow implicit typing rules, even though ```implicit none``` should be used
 The reader of a Fortran program expects variables such as ```i``` or ```i1``` to be integers and ```x``` or ```x1``` to be real.
