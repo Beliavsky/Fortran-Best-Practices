@@ -69,7 +69,7 @@ Set ```x_``` to ```optional``` argument ```x``` if it is ```present``` and to a 
 This clarifies to the reader and the compiler that the value is fixed and prevents inadvertent changes.
 
 #### Parametrize file units with meaningful names
-For example, set parameter such as ```data_unit``` and ```output_unit``` and use them in ```read``` and ```write``` statements. If you use integer literals to specify the unit in ```read``` or ```write``` statements, it's easy to mix them up.
+For example, set a ```parameter``` such as ```data_unit``` and ```output_unit``` and use it in ```read``` and ```write``` statements. If you use integer literals to specify the unit in ```read``` or ```write``` statements, it's easy to mix them up.
 
 #### Explicitly leave spaces between numbers in formatted output
 Otherwise the numbers may be "mushed" together if they are larger than expected. Instead of 
