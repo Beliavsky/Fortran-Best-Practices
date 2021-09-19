@@ -59,6 +59,12 @@ This is unnecessary since such arrays are deallocated when they go out of scope.
 
 #### When opening a file, specify the ```action``` as ```read``` or ```write```
 
+#### Do not write to standard output in a subroutine, except for error handling
+It is more flexible to pass a unit number to the subroutine and to write to that unit. The unit number argument can be ```optional```, and the local unit number can be set to standard output if the argument is not ```present```.
+
+#### Use local variables with a _ suffix to shadow ```optional``` arguments
+Set ```x_``` to optional argument ```x``` if it is ```present``` and to a default value otherwise. Consider using the ```optval``` function of stdlib. 
+
 #### Make a variable whose value is fixed a ```parameter```
 This clarifies to the reader and the compiler that the value is fixed and prevents inadvertent changes.
 
