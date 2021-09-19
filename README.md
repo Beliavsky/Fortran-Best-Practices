@@ -67,3 +67,8 @@ A formatted ```read``` depends on the data file matching the format exactly and 
 The reader of a Fortran program expects variables such as ```i``` or ```i1``` to be integers and ```x``` or ```x1``` to be real.
 
 #### If a program or procedure uses a published algorithm or is derived from another code, cite the publication or code
+
+#### Use compiler options that detect unused variables or parameters, and delete them
+
+#### Compile with a standard conformance option and fix code that is not conformant
+Use for example ```gfortran -std=f2018``` or ```ifort -stand:f18```
