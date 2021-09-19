@@ -140,7 +140,7 @@ For example write ```z = c*x + d*y```
 #### Use integer exponentiation when possible
 Write ```x**2``` not ```x**2.0``` . The compiler may produce more efficient code for the former, which makes clear that the variable is raised to an exact integer power.
 
-#### Collect physical and mathematical constants in a single module that is ```use```d where needed
+#### Collect physical and mathematical constants in a single module that is used where needed
 Avoid defining a constant such as pi in multiple places.
 
 #### Use [] instead of (//) for array constructors
