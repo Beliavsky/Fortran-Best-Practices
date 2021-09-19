@@ -45,7 +45,7 @@ For example, ```call reg(lhs=a,rhs=b,coeff=x,stderr=c,sse=d)``` is clearer than 
 For example, ```call sub(x1,x2,x3,x4) ! out: x3,x4``` clarifies what the outputs of ```sub``` are.
 
 #### Avoid ```intent(in out)``` arguments when possible
-It was common in Fortran 77 libraries to overwrite an input matrix with output to conserve memory, but this is rarely necessary now. 
+It was common in Fortran 77 libraries to overwrite an input matrix with output to conserve memory, but this is rarely necessary now. Instead use separate ```intent(in)``` and ```intent(out)``` array arguments.
 
 #### At the beginning of a function or subroutine, have at least one comment line explaining what it does
 
