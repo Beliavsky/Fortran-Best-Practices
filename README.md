@@ -65,3 +65,5 @@ A formatted ```read``` depends on the data file matching the format exactly and 
 
 #### Short variable names should follow implicit typing rules, even though ```implicit none``` should be used
 The reader of a Fortran program expects variables such as ```i``` or ```i1``` to be integers and ```x``` or ```x1``` to be real.
+
+#### If a program or procedure uses a published algorithm or is derived from another code, cite the publication or code
