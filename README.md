@@ -127,3 +127,6 @@ This aids legibility.
 
 #### Use ```end subroutine foo``` or ```end function foo``` or ```end program foo``` instead of just ```end```
 It helps the reader see what program unit is being terminated.
+
+#### Separate terms in an arithmetic expression with spaces
+For example write ```c*x + d*y```
