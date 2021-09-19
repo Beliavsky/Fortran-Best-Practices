@@ -105,7 +105,8 @@ Gfortran and Intel Fortran are both free and mature and should both be used, at 
 #### Avoid the ```dimension``` keyword in declarations, except to declare multiple arrays of the same shape
 ```real :: vec(n1),mat(n1,n2)``` is more concise than </br></br>
 ```real, dimension(n1) :: vec```</br>
-```real, dimension(n1,n2) :: mat```
+```real, dimension(n1,n2) :: mat``` </br>
+```real, dimension(n1,n2) :: a,b,c``` is a good use of ```dimension```
 
 #### Use informative loop variable names similar to the name of the upper bound
 For example, ```do iday=1,ndays``` or ```do iatom=1,natom```
