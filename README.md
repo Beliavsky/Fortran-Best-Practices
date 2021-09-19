@@ -6,7 +6,7 @@
 The .f90 suffix indicates free source form, not that the code conforms to the Fortran 90 standard. Don't use suffixes such as .f95, .f03, .f08, or .f18, which not all compilers and build systems recognize as free source form Fortran files.
 
 #### Write code in lower case
-Code in lower case is more readable than code in all upper case. Comments should be capitalized as normal English.
+Code in lower case is more readable than code in all upper case. Comments should be capitalized as normal written language.
 
 #### Use format strings instead of ```format``` statements
 It is easier for the reader to understand a ```write``` statement if the format string is on the same line, rather than in a separate numbered format statement. If the same format string is used in multiple ```write``` statements, define it as a ```parameter```.
