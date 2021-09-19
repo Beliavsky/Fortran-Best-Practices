@@ -100,7 +100,7 @@ Use for example ```gfortran -std=f2018``` or ```ifort -stand:f18```
 #### Regularly compile and run your code with multiple compilers
 Gfortran and Intel Fortran are both free and mature and should both be used, at the minimum.
 
-#### Avoid ```goto```, except possibly for error handling at the end of a main program or procedure
+#### Avoid ```goto```, except possibly for error handling at the end of a main program or procedure. Avoid numbered lines except to delineate a block of code for error handling.
 
 #### Avoid the ```dimension``` keyword in declarations, except to declare multiple arrays of the same shape
 ```real :: vec(n1),mat(n1,n2)``` is more concise than </br></br>
