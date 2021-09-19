@@ -94,7 +94,7 @@ The reader of a Fortran program expects variables such as ```i``` or ```i1``` to
 
 #### Use compiler options that detect unused variables or parameters, and delete them
 
-#### Compile with a standard conformance option and fix code that is not conformant
+#### Compile with a standard conformance option and fix code that is not conformant. Consider fixing code that uses obsolescent features.
 Use for example ```gfortran -std=f2018``` or ```ifort -stand:f18```
 
 #### Regularly compile and run your code with multiple compilers
