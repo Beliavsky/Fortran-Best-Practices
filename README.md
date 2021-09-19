@@ -55,3 +55,10 @@ Otherwise the numbers may be "mushed" together if they are larger than expected.
 write
 
 ```write (*,"('coeff:',100(1x,f12.6))") x(1:n)```
+
+#### Use list-directed ```read``` to read data.
+A formatted ```read``` depends on the data file matching the format exactly and is error-prone.
+
+#### Indent loops, ```if``` blocks, and ```select case``` blocks
+
+#### Label deeply nested loops so that it is clear what the ```end do``` corresponds to
