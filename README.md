@@ -74,11 +74,11 @@ For example, set a ```parameter``` such as ```data_unit``` and ```output_unit```
 #### Explicitly leave spaces between numbers in formatted output
 Otherwise the numbers may be "mushed" together if they are larger than expected. Instead of 
 
-```write (*,"('coeff:',100f12.6)") x(1:n)```
+```write (*,"(100f12.6)") x(1:n)```
 
 write
 
-```write (*,"('coeff:',100(1x,f12.6))") x(1:n)```
+```write (*,"(100(1x,f12.6))") x(1:n)```
 
 #### Use list-directed ```read``` to read data.
 A formatted ```read``` depends on the data file matching the format exactly and is error-prone.
