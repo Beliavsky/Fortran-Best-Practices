@@ -81,3 +81,5 @@ Use for example ```gfortran -std=f2018``` or ```ifort -stand:f18```
 
 #### Regularly compile and run your code with multiple compilers
 Gfortran and Intel Fortran are both free and mature and should both be used, at the minimum.
+
+#### Avoid ```goto```, except possibly for error handling at the end of a main program or procedure
