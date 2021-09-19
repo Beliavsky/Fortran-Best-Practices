@@ -121,3 +121,9 @@ For example, if a subroutine accepts arguments ```days(:)```, ```months(:)```, `
 
 #### Use explicit type conversions
 For ```real(kind=wp) :: x``` and ```integer :: i``` write ```x = real(i,kind=wp)``` instead of ```x = i``` to make it clear that the conversion from integer to real is intentional.
+
+#### Separate procedures in a module with a blank or comment line
+This aids legibility.
+
+#### Use ```end subroutine foo``` or ```end function foo``` or ```end program foo``` instead of just ```end```
+It helps the reader see what program unit is being terminated.
