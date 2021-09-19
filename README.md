@@ -26,6 +26,9 @@ A function with an ```intent(out)``` argument should be rewritten as a subroutin
 #### Declare functions and subroutines ```pure``` when possible
 This tells the reader that they do not have side effects.
 
+#### Do not have more than three or four required arguments for a procedure
+Use ```optional``` arguments and derived types to reduce the number of required arguments.
+
 #### At the beginning of a function or subroutine, have at least one comment line explaining what it does
 
 #### Have a comment explaining the meaning of each procedure argument, either separately or on the same line as the argument declaration
