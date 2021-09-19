@@ -32,6 +32,9 @@ Use ```optional``` arguments and derived types to reduce the number of required 
 #### The order of subroutine arguments should be required ```intent(in)``` arguments followed by required ```intent(out)``` or ```intent(in out)``` arguments, followed by ```optional``` arguments
 This will make it easier to call such a subroutine without naming the arguments. Argument declarations should be in the same order as the argument list.
 
+#### Declare a function result on a separate line
+It should appear after the declarations of function arguments but before the declarations of local variables.
+
 #### A procedure call with many arguments should use named arguments
 For example, ```call reg(lhs=a,rhs=b,coeff=x,stderr=se,sse=sumsq)``` is clearer than ```call reg(a,b,x,se,sumsq)```
 
@@ -142,3 +145,6 @@ Write ```x**2``` not ```x**2.0``` . The compiler may produce more efficient code
 
 #### Collect physical and mathematical constants in a single module that is ```use```d where needed
 Avoid defining a constant such as pi in multiple places.
+
+#### Use [] instead of (//) for array constructors
+This has been standard since Fortran 2003 and is supported by currently maintained compilers. The syntax is shorter and resembles that of other languages.
