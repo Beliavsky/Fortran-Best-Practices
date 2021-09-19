@@ -69,6 +69,9 @@ Such statements are unnecessary. Use ```stop``` only to end a program early or `
 #### Do not ```deallocate``` ```allocatable``` arrays just before the end of a program or procedure
 This is unnecessary since such arrays are deallocated when they go out of scope.
 
+#### If a derived type has ```allocatable``` components that have related shapes, write a subroutine to allocate them consistently
+Otherwise the code will need to be updated in several places if a new allocatable component is added to the definition of the derived type. Also write subroutines to read and write the derived type.
+
 #### When opening a file, specify the ```action``` as ```read``` or ```write```
 
 #### Do not write to standard output in a subroutine, except for error handling
