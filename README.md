@@ -83,3 +83,5 @@ Use for example ```gfortran -std=f2018``` or ```ifort -stand:f18```
 Gfortran and Intel Fortran are both free and mature and should both be used, at the minimum.
 
 #### Avoid ```goto```, except possibly for error handling at the end of a main program or procedure
+
+#### Avoid the ```dimension``` keyword in declarations, except to declare multiple arrays of the same shape
