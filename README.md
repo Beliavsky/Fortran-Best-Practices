@@ -146,6 +146,9 @@ Avoid defining a constant such as pi in multiple places.
 #### Use [] instead of (//) for array constructors
 This has been standard since Fortran 2003 and is supported by currently maintained compilers. The syntax is shorter and resembles that of other languages.
 
+#### Do not rely on list-directed output having the same appearance across compilers
+Use formatted output instead when this is desired.
+
 #### Compile with a standard conformance option and fix code that is not conformant. Consider fixing code that uses obsolescent features.
 Use for example ```gfortran -std=f2018``` or ```ifort -stand:f18```
 
