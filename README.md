@@ -36,6 +36,14 @@ For example, ```use m, only: func,sub``` instead of ```use m```. This clarifies 
 #### Put a ```private``` statement at the beginning of a module. Only make ```public``` what is necessary.
 This reduces namespace clashes and tells the reader what entities of a module are exported to other program units.
 
+#### Do not put a ```stop``` statement before the end of the main program or a ```return``` statement before the end of a procedure.
+Such statements are unnecessary. Use ```stop``` only to end a program early or ```return``` only to exit a procedure early.
+
+#### When opening a file, specify the ```action``` as ```read``` or ```write```
+
+#### Parametrize file units with meaningful names
+For example, set parameter such as ```data_unit``` and ```output_unit``` and use them in ```read``` and ```write``` statements.
+
 #### Explicitly leave spaces between numbers in formatted output
 Otherwise the numbers may be "mushed" together if they are larger than expected. Instead of 
 
@@ -44,6 +52,3 @@ Otherwise the numbers may be "mushed" together if they are larger than expected.
 write
 
 ```write (*,"('coeff:',100(1x,f12.6))") x(1:n)```
-
-#### Do not put a ```stop``` statement before the end of the main program or a ```return``` statement before the end of a procedure.
-Such statements are unnecessary. Use ```stop``` only to end a program early or ```return``` only to exit a procedure early.
