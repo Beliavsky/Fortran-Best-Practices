@@ -87,6 +87,8 @@ A formatted ```read``` depends on the data file matching the format exactly and 
 
 #### Label deeply nested loops so that it is clear what the ```end do``` corresponds to
 
+#### Use one-line-if statements instead of if blocks when possible, for concision
+
 #### Short variable names should follow implicit typing rules, even though ```implicit none``` should be used
 The reader of a Fortran program expects variables such as ```i``` or ```i1``` to be integers and ```x``` or ```x1``` to be real.
 
@@ -107,6 +109,9 @@ Gfortran and Intel Fortran are both free and mature and should both be used, at 
 ```real, dimension(n1) :: vec```</br>
 ```real, dimension(n1,n2) :: mat``` </br></br>However,</br>
 ```real, dimension(n1,n2) :: a,b,c``` is a good use of ```dimension```
+
+#### Declare multiple variables of the same type on the same line, for concision
+An exception is when you want an inline comment for each variable after its declaration.
 
 #### Use informative loop variable names similar to the name of the upper bound
 For example, ```do iday=1,ndays``` or ```do iatom=1,natoms```
