@@ -3,7 +3,7 @@
 #### Use free source form rather than fixed source form
 
 #### Use the .f90 suffix for free source form code
-The .f90 suffix indicates free source form, not that the code conforms to the Fortran 90 standard. Don't use suffixes such as .f95, .f03, .f08, .f18, which not all compilers and build systems recognize as free source form Fortran files.
+The .f90 suffix indicates free source form, not that the code conforms to the Fortran 90 standard. Don't use suffixes such as .f95, .f03, .f08, or .f18, which not all compilers and build systems recognize as free source form Fortran files.
 
 #### Write code in lower case
 Code in lower case is more readable than code in all upper case. Comments should be capitalized as normal English.
