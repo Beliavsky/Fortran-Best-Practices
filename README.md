@@ -44,3 +44,6 @@ Otherwise the numbers may be "mushed" together if they are larger than expected.
 write
 
 ```write (*,"('coeff:',100(1x,f12.6))") x(1:n)```
+
+#### Do not put a ```stop``` statement before the end of the main program or a ```return``` statement before the end of a procedure.
+Such statements are unnecessary. Use ```stop``` only to end a program early or ```return``` only to exit a procedure early.
