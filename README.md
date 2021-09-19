@@ -36,6 +36,7 @@ This will make it easier to call such a subroutine without naming the arguments.
 It should appear after the declarations of function arguments but before the declarations of local variables.
 
 #### Avoid using saved variables when possible. When they are necessary use the ```save``` atribute.
+In a procedure, ```integer :: i = 0``` has a different meaning in Fortran than the analogous statement in other languages, and one should write ```integer, save :: i = 0``` instead to alert the reader.
 
 #### A procedure call with many arguments should use named arguments
 For example, ```call reg(lhs=a,rhs=b,coeff=x,stderr=se,sse=sumsq)``` is clearer than ```call reg(a,b,x,se,sumsq)```
