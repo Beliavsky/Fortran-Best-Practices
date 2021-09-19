@@ -132,4 +132,4 @@ It helps the reader see what program unit is being terminated.
 For example write ```z = c*x + d*y```
 
 #### Use integer exponentiation when possible
-Write ```x**2``` not ```x**2.0```
+Write ```x**2``` not ```x**2.0``` . The compiler may produce more efficient code for the former, which makes clear that the variable is raised to an exact integer power.
