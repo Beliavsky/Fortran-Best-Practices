@@ -20,6 +20,9 @@ If this is done, it is unnecessary to write ```implicit none``` in each procedur
 #### Use ```intent``` for all procedure arguments
 Any argument that is strictly an input should be declared ```intent(in)```.
 
+#### All function arguments should be ```intent(in)```.
+A function with an ```intent(out)``` argument should be rewritten as a subroutine.
+
 #### Declare functions and subroutines ```pure``` when possible
 This tells the reader that they do not have side effects.
 
