@@ -109,7 +109,7 @@ Gfortran and Intel Fortran are both free and mature and should both be used, at 
 ```real, dimension(n1,n2) :: a,b,c``` is a good use of ```dimension```
 
 #### Use informative loop variable names similar to the name of the upper bound
-For example, ```do iday=1,ndays``` or ```do iatom=1,natom```
+For example, ```do iday=1,ndays``` or ```do iatom=1,natoms```
 
 #### Don't use array sections when the whole array is referenced
 Refer to ```real :: x(n)``` with ```x``` instead of ```x(:)``` or ```x(1:n)```. Use array sections for subsets of an array.
