@@ -44,6 +44,9 @@ This is unnecessary since such arrays are deallocated when they go out of scope.
 
 #### When opening a file, specify the ```action``` as ```read``` or ```write```
 
+#### Make a variable whose value is fixed a ```parameter```
+This clarifies to the reader and the compiler that the value is fixed and prevents inadvertent changes.
+
 #### Parametrize file units with meaningful names
 For example, set parameter such as ```data_unit``` and ```output_unit``` and use them in ```read``` and ```write``` statements. If you use integer literals to specify the unit in ```read``` or ```write``` statements, it's easy to mix them up.
 
