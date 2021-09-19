@@ -86,5 +86,5 @@ Gfortran and Intel Fortran are both free and mature and should both be used, at 
 
 #### Avoid the ```dimension``` keyword in declarations, except to declare multiple arrays of the same shape
 ```real :: vec(n1),mat(n1,n2)``` is more concise than </br>
-```real, dimension(n1) :: vec
-real, dimension(n1,n2) :: mat```
+```real, dimension(n1) :: vec```
+```real, dimension(n1,n2) :: mat```
