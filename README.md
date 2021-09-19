@@ -62,3 +62,6 @@ A formatted ```read``` depends on the data file matching the format exactly and 
 #### Indent loops, ```if``` blocks, and ```select case``` blocks
 
 #### Label deeply nested loops so that it is clear what the ```end do``` corresponds to
+
+#### Short variable names should follow implicit typing rules, even though ```implicit none``` should be used
+The reader of a Fortran program expects variables such as ```i``` or ```i1``` to be integers and ```x``` or ```x``` to be real.
