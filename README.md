@@ -167,6 +167,15 @@ The danger of ```write (*,"(a,1000(1x,i0))") "abc",ivec(:)``` is that ```size(iv
 #### Do not rely on integer or real variables being initialized to zero
 The Fortran standard does not require this. Set such variables to zero explicitly if the code depends on this. Use a compiler option that sets variables to NaN or Inf so that the use of unitialized variables is detected.
 
+#### Echo the values of input parameters read from a file
+A common error is for the input file not to match the ```read``` statements of a program.
+
+#### Print the names of output files created
+If many output files are created in a directory, at least print the directory name.
+
+#### For production programs, print the results of the ```compiler_version``` and ```compiler_options``` intrinsics and the executable name by calling ```get_command_argument```
+This will make it easier to reproduce results.
+
 #### Do not rely on short-circuiting in compound logical expressions or the ```merge``` function
 It is not safe, for example, to write ```if (present(a) .and. a > 0) ainv = 1/a``` . A nested ```if``` where the condition ```present(a)``` is tested first should be used instead. 
 
