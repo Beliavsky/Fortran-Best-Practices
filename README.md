@@ -161,6 +161,9 @@ This has been standard since Fortran 2003 and is supported by currently maintain
 #### Do not rely on list-directed output having the same appearance across compilers
 Use formatted output instead when this is desired.
 
+#### Use the unlimited repeat count edit descriptor of Fortran 2008 instead of a large integer repeat count
+The danger of ```write (*,"(a,1000(1x,i0))") "abc",ivec(:)``` is that ```size(ivec) > 1000``` will cause an error. Instead use the format string ```"(a,*(1000(1x,i0))")```
+
 #### Do not rely on integer or real variables being initialized to zero
 The Fortran standard does not require this. Set such variables to zero explicitly if the code depends on this.
 
