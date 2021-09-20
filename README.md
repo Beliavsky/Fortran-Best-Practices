@@ -194,4 +194,4 @@ Use for example ```gfortran -std=f2018``` or ```ifort -stand:f18```
 Gfortran and Intel Fortran are both free and mature and should both be used, at the minimum. If you have a Fortran 95 code, consider testing it with g95, a mature but unmaintained Fortran 95 compiler.
 
 #### If you compile on Windows, also compile on Windows Subsystem for Linux to verify portability
-Two sources of non-portability are Linux have case-sensitive file and directory names and Linux using a different directory separator.
+Two sources of non-portability are Linux having case-sensitive file and directory names and Linux using a different directory separator.
