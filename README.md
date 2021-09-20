@@ -173,6 +173,9 @@ A common error is for the input file not to match the ```read``` statements of a
 #### Print the names of output files created
 If many output files are created in a directory, at least print the directory name.
 
+#### If a program must not crash within a procedure, use ```allocatable``` rather than ```automatic``` arrays for workspace
+With the ```allocate``` statement you can check the ```iostat``` and handle errors if the program runs out of memory.
+
 #### For production programs, print the results of the ```compiler_version``` and ```compiler_options``` intrinsics and the executable name by calling ```get_command_argument```
 This will make it easier to reproduce results.
 
