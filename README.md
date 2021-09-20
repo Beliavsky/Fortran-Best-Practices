@@ -170,6 +170,9 @@ The Fortran standard does not require this. Set such variables to zero explicitl
 #### Do not rely on short-circuiting in compound logical expressions or the ```merge``` function
 It is not safe, for example, to write ```if (present(a) .and. a > 0) ainv = 1/a``` . A nested ```if``` where the condition ```present(a)``` is tested first should be used instead. 
 
+#### Do not use the ```random_number``` intrinsic if you want exactly reproducible results across compilers
+Compilers implement ```random_number``` differently. This is beneficial if you want to verify that simulation results are robust to the RNG algorithm used.
+
 #### Compile with a standard conformance option and fix code that is not conformant. Consider fixing code that uses obsolescent features.
 Use for example ```gfortran -std=f2018``` or ```ifort -stand:f18```
 
