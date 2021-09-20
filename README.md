@@ -173,6 +173,9 @@ It is not safe, for example, to write ```if (present(a) .and. a > 0) ainv = 1/a`
 #### Do not use the ```random_number``` intrinsic if you want exactly reproducible results across compilers
 Compilers implement ```random_number``` differently. This is beneficial if you want to verify that simulation results are robust to the RNG algorithm used.
 
+#### If you want reproducible results with ```random_number``` for a single compiler, set the seed explicitly
+Some but not all compilers produce the same stream of variates on each run when ```random_number``` is called without a prior call to ```random_seed```.
+
 #### Compile with a standard conformance option and fix code that is not conformant. Consider fixing code that uses obsolescent features.
 Use for example ```gfortran -std=f2018``` or ```ifort -stand:f18```
 
