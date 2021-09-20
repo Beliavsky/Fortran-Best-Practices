@@ -165,7 +165,7 @@ Use formatted output instead when this is desired.
 The danger of ```write (*,"(a,1000(1x,i0))") "abc",ivec(:)``` is that ```size(ivec) > 1000``` will cause an error. Instead use the format string </br>```"(a,*(1x,i0))"```
 
 #### Do not rely on integer or real variables being initialized to zero
-The Fortran standard does not require this. Set such variables to zero explicitly if the code depends on this.
+The Fortran standard does not require this. Set such variables to zero explicitly if the code depends on this. Use a compiler option that sets variables to NaN or Inf so that the use of unitialized variables is detected.
 
 #### Do not rely on short-circuiting in compound logical expressions or the ```merge``` function
 It is not safe, for example, to write ```if (present(a) .and. a > 0) ainv = 1/a``` . A nested ```if``` where the condition ```present(a)``` is tested first should be used instead. 
