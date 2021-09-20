@@ -135,7 +135,7 @@ Use ```write (*,*) x``` instead of ```write (*,*) (x(i),i=1,n)``` if they have t
 For example, if a subroutine accepts arguments ```days(:)```, ```months(:)```, ```years(:)``` that have a common length, probably a derived type should be defined containing (day,month,year). Then an array of that type can be passed.
 
 #### Use explicit type conversions
-For ```real(kind=wp) :: x``` and ```integer :: i``` write ```x = real(i,kind=wp)``` instead of ```x = i``` to make it clear that the conversion from integer to real is intentional.
+For ```real(kind=wp) :: x``` and ```integer :: i``` write ```x = real(i,kind=wp)``` instead of ```x = i``` to make it clear that the conversion from integer to real is intentional. Do not use ```x = dble(i)``` which is less flexible.
 
 #### Separate procedures in a module with a blank or comment line
 This aids legibility.
