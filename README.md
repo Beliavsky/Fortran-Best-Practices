@@ -167,8 +167,8 @@ The danger of ```write (*,"(a,1000(1x,i0))") "abc",ivec(:)``` is that ```size(iv
 #### Do not rely on integer or real variables being initialized to zero
 The Fortran standard does not require this. Set such variables to zero explicitly if the code depends on this.
 
-#### Do not rely on short-circuiting in compound logical expressions
-It is not safe, for example, to write ```if (present(a) .and. a > 0) ainv = 1/a``` . A nested ```if``` where the condition ```present(a)``` is tested first should be used instead.
+#### Do not rely on short-circuiting in compound logical expressions or the ```merge``` function
+It is not safe, for example, to write ```if (present(a) .and. a > 0) ainv = 1/a``` . A nested ```if``` where the condition ```present(a)``` is tested first should be used instead. 
 
 #### Compile with a standard conformance option and fix code that is not conformant. Consider fixing code that uses obsolescent features.
 Use for example ```gfortran -std=f2018``` or ```ifort -stand:f18```
